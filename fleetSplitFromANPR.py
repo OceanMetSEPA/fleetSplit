@@ -20,15 +20,6 @@ def writeChanges(changes, saveloc):
 
   print("Saving changes to '{}'.".format(saveloc))
   changes.to_csv(saveloc, index=False)
-  #with open(saveloc, 'w') as f:
-  #  f.write('Created Using, fleetSplitFromANPR, -\n')
-  #  f.write('Created On, {}, -\n'.format(datetime.now()))
-  #  f.write('Vehicle Class, Cell, Proportion\n')
-  #  for vehClass, PropsAll in changes.items():
-  #    for cell, Propsin in PropsAll.items():
-  #      WStr = '{}, {}, {}\n'.format(vehClass, cell, Propsin)
-  #      #print(WStr)
-  #      f.write(WStr)
 
 def mergeVDicts(D):
   # Merge by adding

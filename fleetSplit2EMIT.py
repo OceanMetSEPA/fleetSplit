@@ -17,10 +17,6 @@ vehcatDefault = os.path.normpath(('C:/Users/edward.barratt/Documents/Development
                                  'VehCats.csv'))
 
 
-# 'C:/Users/edward.barratt/Documents/Development/Python/extractfromeft/input/EMIT/E8.0NOx_11_ScoU17-tx.csv'
-# 'C:/Users/edward.barratt/Documents/Modelling/CAFS/ANPRStuff/DundeeProportion_EuroUFromYear_taxis.csv'
-
-
 def processSplit(anprfile, basefile, vehcatfile=vehcatDefault):
   """
   Creates a table of vehicle proportions that can be copied and pasted in to
@@ -183,10 +179,7 @@ def getArgs():
   ProgDesc = ("Creates a route type csv file of the type whose contents can be "
               "copied and pasted in to EMIT to change the proportions of "
               "different vehicle categories with a particular route type.")
-  ANPRDesc = ("The ANPR file should be a csv file listing all vehicles "
-              "passing the ANPR counter (including double counting of vehicles "
-              "that have passed more than once). There should be a column each "
-              "for vehicle class, euro class, weight class and fuel.")
+  ANPRDesc = ("The ANPR file should be a csv file created using fleetSplitFromANPR.")
   parser = argparse.ArgumentParser(description=ProgDesc)
   parser.add_argument('anprfile', type=str,
                       help="The ANPR file to be processed. "+ANPRDesc)
